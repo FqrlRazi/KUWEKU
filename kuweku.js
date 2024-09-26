@@ -104,7 +104,7 @@ function adjustImages() {
     img3.style.display = "none"; // Hapus gambar ketiga di tablet
   }
   // Jika lebar layar kurang dari 576px (mobile)
-  else if (window.innerWidth < 400) {
+  else if (window.innerWidth < 576 && window.innerWidth >= 100) {
     img2.style.display = "none"; // Hapus gambar kedua di mobile
     img3.style.display = "none"; // Hapus gambar ketiga di mobile
   }
