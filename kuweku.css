@@ -1,0 +1,485 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  background-color: #dec8a9;
+}
+
+/* ini batasan style nav */
+.navbar {
+  font-family: "poppins";
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+  border-radius: 15px;
+}
+.nav {
+  padding: 1% 3% ;
+  background-color: rgba(155, 130, 100, 0.9);
+  border-radius: 15px;
+  height: 100%;
+}
+.navbar.sticky {
+  background-color:  rgba(155, 130, 100, 0.9);
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+  transition: background 0.5s ease;
+  border-radius: 15px;
+}
+.navbar-nav a {
+  color: rgba(255,255,255);
+  font-size: 18px;
+}
+.navbar-nav a:hover {
+  color: #f2ebe1;
+}
+.navbar-brand {
+  font-size: 1.8rem;
+  font-family: "inria serif";
+}
+.logo {
+  transition: filter 0.3s ease;
+}
+.logo:hover {
+  filter: invert(1);
+}
+.E {
+  padding-bottom: 3px;
+}
+
+.nav-link:hover{
+  background-color: #7a634f;
+  border-radius: 15px;
+}
+.nav-order{
+  border: 3px solid #000;
+  border-radius: 15px;
+  background-color: #7a634f;
+}
+.modal-backdrop {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+}
+.modal {
+  z-index: 1000;
+  font-family: "league spartan";
+  font-size: 20px;
+}
+.modal-content {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(152, 127, 96, 1) 40%,
+    rgba(122, 99, 68, 1) 100%
+  );
+}
+.form-control {
+  background-color: #987f60;
+  color: #fff;
+}
+.form-select {
+  background-color: #987f60;
+  color: #000;
+}
+.form-select:focus {
+  outline: none;
+  border-color: #000000;
+}
+.form-select option {
+  padding: 2px;
+}
+.form-select:hover {
+  color: #fff;
+}
+.form-check-label {
+  gap: 20%;
+  font-weight: 400;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Animasi untuk modal */
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* Tambahkan animasi ke modal Bootstrap */
+.modal.fade .modal-dialog {
+  animation: slideInUp 1s ease-in;
+}
+
+.modal.fade.hide .modal-dialog {
+  animation: slideOutDown 1s ease-out;
+}
+
+/* ini batasan style nav */
+
+/* ini batsan style hero */
+.hero {
+  margin-bottom: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.parallax {
+  background-image: url("/assests/bolu-para.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+.text-hero {
+  font-family: "poppins";
+  padding-top: 20%;
+  padding-bottom: 20%;
+  color: #f2ebe1;
+  justify-content: center;
+  align-items: center;
+}
+.bolu {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+/* ini batasan style hero */
+
+/* ini batasan style about */
+.about {
+  padding-top: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.g-about {
+  scale: 1;
+  border-radius: 5%;
+  filter: brightness(0.5);
+}
+.g-about:hover {
+  filter: brightness(1);
+  transition: 0.5s all;
+  scale: 1.05;
+}
+.text-about {
+  padding-top: 5%;
+  font-family: "league spartan";
+}
+.head-text-about {
+  color: #7a634f;
+}
+.head-text {
+  font-weight: 600;
+}
+.read {
+  color: #000;
+  font-family: "league spartan";
+  font-size: 20px;
+}
+.read1{
+  margin-bottom: 2%;
+  color: #000;
+  font-family: "league spartan";
+  font-size: 20px;
+}
+.read:hover {
+  color: #7a634f;
+}
+.more-text {
+  display: none;
+}
+.paragraph-about {
+  font-family: "poppins";
+  font-weight: 400;
+}
+.card {
+  color: #fff;
+  width: 100%;
+  height: 220px;
+  cursor: grab;
+}
+.card-body {
+  border-radius: 10px;
+  background-color: #987f60;
+  font-family: "poppins";
+}
+.card-body:hover {
+  transition: 1s all;
+  background-color: #7a634f;
+}
+.card-body i {
+  background-color: #7a634f;
+  border-radius: 100%;
+}
+.card-body:hover i {
+  background-color: #987f60;
+}
+.kartu {
+  padding-top: 10%;
+}
+/* ini batasan style about */
+/* swiper style */
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-top: 3%;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* swiper style */
+/* ini batasan style product */
+.product {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  gap: 20px;
+}
+.card-pro {
+  background: linear-gradient(#7a634f 0 0) no-repeat var(--p, 200%) 100% / 200%
+    var(--p, 0.08em);
+  transition: 0.3s var(--t, 0s),
+    background-position 0.3s calc(0.3s - var(--t, 0s));
+  margin-top: 10%;
+  background-color: #987f60;
+  border: 2px solid #00000000;
+  height: 580px;
+  margin-bottom: 10%;
+  border-radius: 15px;
+}
+.card-pro:hover {
+  --p: 100%;
+  --t: 0.3s;
+  border: 2px solid #7a634f;
+  transition: 0.5s all ease-in-out;
+  color: #000;
+  scale: 1.03;
+  cursor: grab;
+}
+.card-pro:hover img {
+  scale: 0.92;
+  transition: 0.3s all;
+}
+.card-img-top {
+  scale: 0.9;
+  border-radius: 5%;
+}
+.card-body-pro {
+  color: #fff;
+  font-family: "poppins";
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.card-title.pro {
+  font-family: "league spartan";
+}
+/* batasan style product  */
+
+/* ini batasan style testi */
+.testimoni {
+  margin-bottom: 5%;
+}
+.card-testi {
+  background: linear-gradient(#f2ebe1 0 0) top / var(--p, 0) no-repeat;
+  transition: 0.4s, background-position 0s;
+  background-color: #7a634f;
+  color: #fff;
+  height: 230px;
+  border-radius: 15px;
+  cursor: grab;
+}
+.card-body-testi {
+  padding-left: 2%;
+  padding-top: 4%;
+  padding-right: 2%;
+  font-family: "poppins";
+}
+.card-title.testi {
+  font-family: "league spartan";
+}
+.card-testi:hover {
+  --p: 100%;
+  background-position: bottom;
+  transition: 0.3s all ease;
+  color: #000;
+}
+/* ini batasan style testi */
+
+/* ini batasan style faq */
+.faq {
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 8%;
+}
+.collapsed {
+  background: linear-gradient(#987f60 0 0) right / var(--p, 0) no-repeat;
+  transition: 0.4s, background-position 0s;
+  border: 1px solid #00000000;
+  background-color: #dec8a9;
+  font-family: "poppins";
+  font-weight: 500;
+}
+.collapsed:hover {
+  --p: 100%;
+  background-position: left;
+  border: 1px solid #987f60;
+  color: #fff;
+}
+
+.accordion-body {
+  background-color: #7a634f;
+  color: #fff;
+  font-family: "league spartan";
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* ini batasan style faq */
+
+/* ini batasan style contact */
+.card-con {
+  background-color: #987f60;
+  color: #fff;
+}
+.card-header-con {
+  font-family: "poppins";
+}
+.card-body-con {
+  padding-left: 3%;
+  padding-top: 3%;
+  font-family: "league spartan";
+  margin-bottom: 3%;
+}
+.card-text-con {
+  font-size: 18px;
+}
+.order {
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  margin-left: 40%;
+  background: linear-gradient(#7a634f 0 0) left / var(--p, 0) no-repeat;
+  transition: 0.4s, background-position 0s;
+}
+.order:hover {
+  --p: 100%;
+  background-position: right;
+  border: 2px solid #fff;
+}
+.card-loc {
+  width: 100%;
+}
+.card-header-loc {
+  font-family: "poppins";
+}
+.card-body-loc {
+  font-family: "league spartan";
+}
+.card-text-loc {
+  font-size: 30px;
+}
+
+.card-content-loc {
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+}
+.card-content-loc:hover {
+  color: #7a634f;
+}
+/* batas style contact  */
+
+/* parallax */
+.kosong {
+  height: 35vh;
+  padding: 0;
+  margin: 0;
+}
+.parallax-2 {
+  background-image: url("/assests/donat.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.35);
+}
+
+/* ini batasan style footer */
+footer {
+  background-color: #987f60;
+}
+.footer-kuweku {
+  font-family: "inria serif";
+  font-weight: 700;
+  font-size: 30px;
+  color: #000;
+  filter: invert(1);
+  padding-top: 5%;
+}
+.footer-header {
+  font-family: "poppins";
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding-top: 5%;
+}
+
+.q-link-footer {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "league spartan";
+  font-size: 1.15rem;
+}
+.q-link-footer:hover{
+  margin-left: 5px;
+}
+.q-link-foote {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "league spartan";
+  font-size: 1.15rem;
+}
+.q-link-foote:hover{
+  font-size: 1.2rem;
+}

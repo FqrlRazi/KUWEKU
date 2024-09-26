@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KUWEKU</title>
+    <link rel="icon" href="assests/logo-invert.png" />
+    <!-- Link Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Link swiper JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- Link AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="kuweku.css" />
+  </head>
+
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar navbar-expand-xl navbar-expand-lg fixed-top" id="navbar">
+      <div class="container nav">
+        <div class="logo">
+          <a class="navbar-brand" href="#hero"
+            >KUW<span
+              ><img
+                class="E"
+                src="/assests/logo.png"
+                alt="logo"
+                width="25"
+                height="30" /></span
+            >KU</a
+          >
+          <button
+            class="navbar-toggler btn"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+        <div class="collapse navbar-collapse text-center" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#produk">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimoni">Testimoni</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">F.A.Q</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Our Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-order" href="#order" id="openModal">Order</a>
+              <div
+                class="modal fade text-start"
+                id="orderModal"
+                tabindex="-1"
+                aria-labelledby="orderModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-dark" id="orderModalLabel">
+                        Form Order
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="orderForm">
+                        <div class="mb-3">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label"
+                            >Nama :
+                          </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleFormControlInput1"
+                            placeholder="Bambang Prakoso"
+                            required
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label
+                            for="exampleFormControlInput2"
+                            class="form-label"
+                            >Nomor telepon :
+                          </label>
+                          <input
+                            type="tel"
+                            class="form-control"
+                            id="exampleFormControlInput2"
+                            placeholder="+62 123-456-789"
+                            required
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="product" class="form-label"
+                            >Produk :
+                          </label>
+                          <select class="form-select" id="product" required>
+                            <option value="" readonly>Pilih Product</option>
+                            <option value="Kue">Kue</option>
+                            <option value="Bolu">Bolu</option>
+                            <option value="Mochi">Mochi</option>
+                            <option value="Donat">Donat</option>
+                            <option value="Kue Kering">Kue Kering</option>
+                            <option value="Pudding">Pudding</option>
+                          </select>
+                        </div>
+                        <div class="mb-3">
+                          <label for="address" class="form-label"
+                            >Alamat pengiriman :
+                          </label>
+                          <textarea
+                            class="form-control"
+                            id="address"
+                            rows="3"
+                            placeholder="Tuliskan alamat yang detail"
+                            required
+                          ></textarea>
+                        </div>
+                        <div class="mb-3">
+                          <label for="notes" class="form-label"
+                            >Catatan :
+                          </label>
+                          <textarea
+                            class="form-control"
+                            id="notes"
+                            rows="4"
+                            placeholder="Jika ada tambahan pada pesanan anda isi disini ya"
+                          ></textarea>
+                        </div>
+                        <div class="mb-3">
+                          <label for="payment" class="form-label"
+                            >Payment Method :</label
+                          >
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="flexRadioDefault"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexRadioDefault1"
+                            >
+                              E-Wallet
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="flexRadioDefault"
+                              id="flexRadioDefault2"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexRadioDefault2"
+                            >
+                              Banking
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="flexRadioDefault"
+                              id="flexRadioDefault3"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexRadioDefault3"
+                            >
+                              COD
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Tutup
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        id="submitOrder"
+                      >
+                        Kirim Pesanan
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Hero start -->
+    <section id="hero">
+      <div class="container-fluid hero parallax">
+        <div class="row">
+          <!-- kosong -->
+          <div class="col-xl-4 col-lg-5 col-md-12 col-sm-12"></div>
+          <!-- kosong -->
+          <!-- text -->
+          <div class="col-xl-8 col-lg-7 col-md-12 col-sm-12">
+            <div class="text-hero text-end">
+              <h1>The pleasure of an Unforgettable Combination of Flavors.</h1>
+              <br />
+              <h4>Aneka kue, pudding, bolu, dan jajanan lainnya.</h4>
+            </div>
+          </div>
+          <!-- text end -->
+        </div>
+      </div>
+    </section>
+    <!-- Hero end -->
+
+    <!-- About start -->
+    <section class="about" id="about">
+      <div class="container konten-about">
+        <h1 class="text-center mb-6 text-about" id="about">
+          About <span class="head-text-about">Us</span>
+        </h1>
+        <div class="row">
+          <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+              <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-2">
+                  <img
+                    src="/assests/kue.png"
+                    alt="gambar1"
+                    class="img-fluid g-about"
+                    id="img2"
+                  />
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-2">
+                  <img
+                    src="/assests/donat.png"
+                    alt="gambar2"
+                    class="img-fluid g-about"
+                    id="img1"
+                  />
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mt-2">
+                  <img
+                    src="assests/bolu.png"
+                    alt="gambar3"
+                    class="img-fluid g-about"
+                    id="img3"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row text-about">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" id="text">
+            <!-- Text 1 -->
+            <div data-aos="zoom-in-right" data-aos-delay="200" id="content2">
+              <h4 class="head-text">
+                Sekilas tentang <span class="head-text-about">KUWEKU</span>
+              </h4>
+              <p class="paragraph-about">
+                KuWEKU adalah toko kue baru yang telah berhasil memikat hati
+                pelanggan dalam waktu singkat. Menawarkan beragam pilihan kue,
+                bolu, puding dan jenis dessert lainnya.
+                <span class="dots"></span
+                ><span class="more-text">
+                  Toko ini berfokus pada penyediaan berbagai pilihan makanan
+                  manis dengan kualitas yang baik, cocok untuk berbagai acara
+                  atau sebagai camilan sehari-hari.Dengan bahan-bahan terbaik
+                  dan sentuhan kreativitas dalam setiap produk, KUWEKU
+                  berkomitmen untuk memanjakan lidah para pelanggan, baik untuk
+                  acara spesial maupun sebagai teman sehari-hari. Setiap gigitan
+                  dari produk KUWEKU menyajikan rasa yang kaya dan tampilan yang
+                  menarik, menjadikannya pilihan sempurna untuk merayakan momen
+                  istimewa atau sekadar menikmati waktu santai.</span
+                >
+              </p>
+              <br />
+              <a
+                class="read1"
+                href="#text"
+                id="btn2"
+                onclick="toggleText('content2', 'btn2')"
+                >Read More
+              </a>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <!-- Text 2 -->
+            <div data-aos="zoom-in-left" data-aos-delay="200" id="content1">
+              <h4 class="head-text">
+                Apa yang <span class="head-text-about">KUWEKU</span> jual
+              </h4>
+              <p class="paragraph-about">
+                KUWEKU adalah sebuah toko kue baru yang menjual berbagai jenis
+                kue, bolu, pudding, dan jenis lainnya. <span class="dots"></span
+                ><span class="more-text"
+                  >Toko ini berfokus pada penyediaan berbagai pilihan makanan
+                  manis dengan kualitas yang baik, cocok untuk berbagai acara
+                  atau sebagai camilan sehari-hari.</span
+                >
+              </p>
+              <br /><br />
+              <a
+                class="read"
+                href="#text"
+                id="btn1"
+                onclick="toggleText('content1', 'btn1')"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container kartu"></div>
+      <h1 class="text-center text-about" id="about">
+        Kenapa Memilih <span class="head-text-about">KUWEKU</span>
+      </h1>
+      <div data-aos="zoom-out-right" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Card 1 -->
+          <div class="swiper-slide">
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="check-icon mb-3">
+                  <i class="fa-regular fa-circle-check fa-3x"></i>
+                </div>
+                <h4 class="card-title">Sweet taste</h4>
+                <p class="card-text">Manis dengan kualitas yang baik</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2  -->
+          <div class="swiper-slide">
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="check-icon mb-3">
+                  <i class="fa-regular fa-circle-check fa-3x"></i>
+                </div>
+                <h4 class="card-title">Cheap</h4>
+                <p class="card-text">Harga yang ramah</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="swiper-slide">
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="check-icon mb-3">
+                  <i class="fa-regular fa-circle-check fa-3x"></i>
+                </div>
+                <h4 class="card-title">Premium</h4>
+                <p class="card-text">Dibuat dengan bahan yang premium</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="swiper-slide">
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="check-icon mb-3">
+                  <i class="fa-regular fa-circle-check fa-3x"></i>
+                </div>
+                <h4 class="card-title">Location</h4>
+                <p class="card-text">
+                  Tempat yang mudah untuk dicari oleh orang ramai
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="swiper-slide">
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="check-icon mb-3">
+                  <i class="fa-regular fa-circle-check fa-3x"></i>
+                </div>
+                <h4 class="card-title">Easy to order</h4>
+                <p class="card-text">Mudah untuk memesan</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="swiper-slide">
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="check-icon mb-3">
+                  <i class="fa-regular fa-circle-check fa-3x"></i>
+                </div>
+                <h4 class="card-title">Friendly to guest</h4>
+                <p class="card-text">Ramah kepada pelanggan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About end -->
+
+    <!-- Product start -->
+    <section class="product" id="produk">
+      <div class="container">
+        <h1 class="text-center mb-6 text-about" id="about">
+          Recommended by <span class="head-text-about">Us</span>
+        </h1>
+        <h4 class="text-center">
+          Rekomendasi jenis dessert yang harus kalian coba <br />
+          ketika datang ke <span class="head-text-about">KUWEKU</span>
+        </h4>
+        <div
+          data-aos="zoom-in-down"
+          data-aos-delay="200"
+          class="swiper mySwiper2"
+        >
+          <div class="swiper-wrapper">
+            <!-- Card 1 -->
+            <div class="swiper-slide">
+              <div class="card-pro">
+                <img
+                  src="/assests/kue.png"
+                  class="card-img-top mx-auto d-block"
+                  alt="KUE"
+                />
+                <div class="card-body-pro">
+                  <h5 class="card-title-pro text start">KUE</h5>
+                  <p class="card-text-pro">
+                    Kue adalah pilihan utama setiap pelanggan ketika datang ke
+                    KUWEKU, dengan cita rasa yang manis membuat setiap pelanggan
+                    sangat menyukai product kue kami.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="swiper-slide">
+              <div class="card-pro">
+                <img
+                  src="/assests/bolu.png"
+                  class="card-img-top mx-auto d-block"
+                  alt="KUE"
+                />
+                <div class="card-body-pro">
+                  <h5 class="card-title-pro text start">BOLU</h5>
+                  <p class="card-text-pro">
+                    Bolu adalah varian produk kami yang sering habis stok setiap
+                    harinya, karena bolu kami mempunyai banyak varian seperti
+                    bolu pandan, bolu pisang, dan jenis bolu lainnya.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- card 3 -->
+            <div class="swiper-slide">
+              <div class="card-pro">
+                <img
+                  src="/assests/donat.png"
+                  class="card-img-top mx-auto d-block"
+                  alt="KUE"
+                />
+                <div class="card-body-pro">
+                  <h5 class="card-title-pro text start">DONAT</h5>
+                  <p class="card-text-pro">
+                    Donat merupakan menu yang sangat disukai oleh banyak
+                    kalangan khususnya anak-anak karena donat dari KUWEKU
+                    mempunyai topping dan saus yang berbeda setiap jenis
+                    donatnya.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="swiper-slide">
+              <div class="card-pro">
+                <img
+                  src="/assests/bday.png"
+                  class="card-img-top mx-auto d-block"
+                  alt="KUE"
+                />
+                <div class="card-body-pro">
+                  <h5 class="card-title-pro text start">BIRTHDAY CAKE</h5>
+                  <p class="card-text-pro">
+                    KUWEKU juga menerima jasa untuk membuat birthday cake dengan
+                    varian sesuai permintaan pelanggan ataupun bisa sesuai
+                    referensi dari sosial media.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="swiper-slide">
+              <div class="card-pro">
+                <img
+                  src="/assests/jajanan.png"
+                  class="card-img-top mx-auto d-block"
+                  alt="KUE"
+                />
+                <div class="card-body-pro">
+                  <h5 class="card-title-pro text start">KUE KERING</h5>
+                  <p class="card-text-pro">
+                    Kue kering dan jajanan seperti gabus keju, nastar, dan
+                    lainnya, yang biasa identik kue kering seperti itu hanya
+                    dapat dicari ketika lebaran sekarang sudah tidak perlu.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="swiper-slide">
+              <div class="card-pro">
+                <img
+                  src="/assests/stroberi.png"
+                  class="card-img-top mx-auto d-block"
+                  alt="KUE"
+                />
+                <div class="card-body-pro">
+                  <h5 class="card-title-pro text start">BUAH-BUAHAN</h5>
+                  <p class="card-text-pro">
+                    KUWEKU juga menjual buah-buahan segar seperti stroberi,
+                    anggur, dan buah berukuran kecil lainnya. Varian ini jarang
+                    hadir hanya ketika ada event tertentu saja.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4 class="text-center">
+          Segera datangi dan mencoba setiap varian yang ada di
+          <span class="head-text-about">KUWEKU</span>
+        </h4>
+      </div>
+    </section>
+    <!-- Product end -->
+
+    <!-- Testimoni Start -->
+    <section id="testimoni" class="testimoni">
+      <div class="container">
+        <h1 class="text-center mb-6 text-about" id="about">
+          Testimoni pelanggan <span class="head-text-about">KUWEKU</span>
+        </h1>
+        <div data-aos="flip-down" data-aos-delay="100" class="swiper mySwiper3">
+          <div class="swiper-wrapper">
+            <!-- Testi 1 -->
+            <div class="swiper-slide">
+              <div class="card-testi">
+                <div class="card-body-testi">
+                  <h5 class="card-title-testi">Farool</h5>
+                  <p class="card-text-testi">
+                    "Puding dari KUWEKU adalah favorit keluarga saya! Sangat
+                    lezat dan segar."
+                  </p>
+                  <p class="text-muted">4,7/5</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testi 2 -->
+            <div class="swiper-slide">
+              <div class="card-testi">
+                <div class="card-body-testi">
+                  <h5 class="card-title-testi">Hilal</h5>
+                  <p class="card-text-testi">
+                    "Selalu memesan dari KUWEKU untuk acara spesial. Kualitasnya
+                    tidak pernah mengecewakan."
+                  </p>
+                  <p class="text-muted">5/5</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testi 3 -->
+            <div class="swiper-slide">
+              <div class="card-testi">
+                <div class="card-body-testi">
+                  <h5 class="card-title-testi">Houzens</h5>
+                  <p class="card-text-testi">
+                    "Saya sangat suka dengan donat dari KUWEKU, rasanya sangat
+                    creamy dengan tambahan topping yang dapat dipilih sesuai
+                    selera."
+                  </p>
+                  <p class="text-muted">4,8/5</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testi 4 -->
+            <div class="swiper-slide">
+              <div class="card-testi">
+                <div class="card-body-testi">
+                  <h5 class="card-title-testi">Ripa</h5>
+                  <p class="card-text-testi">
+                    "Saya sangat puas dengan pelayanan KUWEKU. Pesanan birthday
+                    cake saya datang tepat waktu dan kuenya lembut banget.
+                    Hiasannya juga cantik dan sesuai dengan yang saya request."
+                  </p>
+                  <p class="text-muted">4,8/5</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testi 5 -->
+            <div class="swiper-slide">
+              <div class="card-testi">
+                <div class="card-body-testi">
+                  <h5 class="card-title-testi">Asya</h5>
+                  <p class="card-text-testi">
+                    "Rasa kuenya enak, tapi ukuran sedikit lebih kecil dari yang
+                    saya bayangkan. Namun untuk kualitas rasa, top banget!"
+                  </p>
+                  <p class="text-muted">4,2/5</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testi 6 -->
+            <div class="swiper-slide">
+              <div class="card-testi">
+                <div class="card-body-testi">
+                  <h5 class="card-title-testi">Amelia</h5>
+                  <p class="card-text-testi">
+                    "Bolu gulungnya favorit saya! Manisnya pas, dan
+                    pengirimannya cepat. Sangat direkomendasikan untuk pecinta
+                    kue!"
+                  </p>
+                  <p class="text-muted">4,8/5</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testi 7 -->
+            <div class="swiper-slide">
+              <div class="card-testi">
+                <div class="card-body-testi">
+                  <h5 class="card-title-testi">Icaa</h5>
+                  <p class="card-text-testi">
+                    "KUWEKU punya varian kue yang cukup banyak dan rasanya enak.
+                    Saya pernah pesan puding cokelat, rasanya lembut dan
+                    manisnya pas. Cuma kalau pengiriman bisa lebih cepat, pasti
+                    lebih baik."
+                  </p>
+                  <p class="text-muted">4/5</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testi 8 -->
+            <div class="swiper-slide">
+              <div class="card-testi">
+                <div class="card-body-testi">
+                  <h5 class="card-title-testi">Bambang</h5>
+                  <p class="card-text-testi">
+                    "Pudingnya... WOW! Lembut dan creamy kayak awan! Rasanya
+                    juara, cuma menurutku sedikit kurang manis, tapi tetap
+                    juara!"
+                  </p>
+                  <p class="text-muted">4,3/5</p>
+                </div>
+              </div>
+            </div>
+            <!-- TEsti 9 -->
+            <div class="swiper-slide">
+              <div class="card-testi">
+                <div class="card-body-testi">
+                  <h5 class="card-title-testi">Arini</h5>
+                  <p class="card-text-testi">
+                    "KUWEKU nggak pernah gagal! Dari pertama kali pesan sampai
+                    sekarang, kualitinya TERJAGA banget! Rasanya konsisten dan
+                    bikin pengen nambah terus."
+                  </p>
+                  <p class="text-muted">4,9/5</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testi 10 -->
+            <div class="swiper-slide">
+              <div class="card-testi">
+                <div class="card-body-testi">
+                  <h5 class="card-title-testi">Toriq</h5>
+                  <p class="card-text-testi">
+                    "Jujur, rasanya enak banget! Ukuran bolunya aja agak lebih
+                    kecil dari ekspektasi, tapi kalo soal rasa... PERFECT!"
+                  </p>
+                  <p class="text-muted">4/5</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimoni end-->
+
+    <!-- FAQ start -->
+    <section id="faq" class="faq">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <h1 class="text-center mb-6 text-about" id="about">
+          FAQ <span class="head-text-about">KUWEKU</span>
+        </h1>
+        <!-- FAQ 1 -->
+        <div
+          data-aos="fade-left"
+          data-aos-delay="150"
+          class="accordion-item rounded"
+        >
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+            >
+              1. Bagaimana cara memesan produk di KUWEKU?
+            </button>
+          </h2>
+          <div
+            id="flush-collapseOne"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              <p>
+                Pemesanan produk di KUWEKU sangat mudah! Anda bisa memesan
+                langsung melalui website kami, atau menghubungi kami melalui
+                WhatsApp dan media sosial. Kami juga menerima pesanan khusus
+                untuk acara seperti ulang tahun, pernikahan, dan event lainnya.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 2  -->
+        <div data-aos="fade-left" data-aos-delay="150" class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed faq-btn"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo"
+              aria-expanded="false"
+              aria-controls="flush-collapseTwo"
+            >
+              2. Berapa lama waktu yang dibutuhkan untuk memproses pesanan?
+            </button>
+          </h2>
+          <div
+            id="flush-collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              <p>
+                Waktu pemrosesan tergantung pada jenis pesanan. Untuk produk
+                biasa, seperti bolu dan puding, pesanan akan diproses dalam 1-2
+                hari. Namun, untuk pesanan besar atau khusus seperti kue ulang
+                tahun, kami membutuhkan waktu 2-3 hari kerja.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 3 -->
+        <div data-aos="fade-left" data-aos-delay="150" class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed faq-btn"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree"
+              aria-expanded="false"
+              aria-controls="flush-collapseThree"
+            >
+              3. Apakah KUWEKU menyediakan pilihan kue yang dapat dikustomisasi?
+            </button>
+          </h2>
+          <div
+            id="flush-collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              <p>
+                Tentu saja! KUWEKU menyediakan layanan kustomisasi kue untuk
+                acara spesial Anda. Anda dapat memilih desain, rasa, dan ukuran
+                sesuai keinginan. Hubungi kami untuk mendiskusikan detail
+                kustomisasi lebih lanjut.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 4  -->
+        <div data-aos="fade-left" data-aos-delay="150" class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed faq-btn"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFour"
+              aria-expanded="false"
+              aria-controls="flush-collapseFour"
+            >
+              4. Apa saja metode pembayaran yang diterima oleh KUWEKU?
+            </button>
+          </h2>
+          <div
+            id="flush-collapseFour"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              <p>
+                Kami menerima pembayaran melalui transfer bank, e-wallet
+                (seperti OVO, GoPay, dan Dana), serta pembayaran tunai saat
+                pengiriman (COD) untuk wilayah tertentu. Kami memastikan metode
+                pembayaran yang mudah dan aman untuk kenyamanan pelanggan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ end -->
+
+    <!-- Contact start -->
+    <section id="contact" class="contact">
+      <div data-aos="fade-right" data-aos-delay="100" class="container mx-auto">
+        <h1 class="card-header-con">
+          Contact <span class="head-text-about">Us</span>
+        </h1>
+        <div class="card-con rounded text-start">
+          <div class="card-body-con">
+            <div class="row">
+              <div class="col-xl-8">
+                <h4 class="card-title-con">~KUWEKU</h4>
+                <p class="card-text-con">
+                  We want to hear from you! Whether it's a special order, a
+                  question, or just a suggestion, we at KUWEKU are always open.
+                  Contact us via:
+                </p>
+              </div>
+              <div class="col-xl-4 align-self-center">
+                <a href="https://wa.me/6285262666468" class="btn order rounded"
+                  ><i class="fa-brands fa-whatsapp"></i> Contact here</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="100" class="container text-end">
+        <h1 class="card-header-con">
+          Lokasi <span class="head-text-about">Kami</span>
+        </h1>
+        <div class="card-loc text-end">
+          <div class="card-body-loc">
+            <div class="content">
+              <h5 class="card-text-loc">Bireuen, Indonesia</h5>
+              <a
+                href="https://maps.app.goo.gl/YL9BKtzSXs9ZYURy7"
+                class="card-content-loc"
+              >
+                <i class="fa-solid fa-map-pin"></i> Jalan T. Hamzah Bendahara,
+                Bireuen City, Kota Juang, Bireuen Regency, Aceh
+              </a>
+              <h5 class="card-text-loc">Jam Kerja :</h5>
+              <p class="card-text-loc">
+                Senin-Jumat (09:00-23:00) <br />
+                Sabtu-Minggu (09:00-21:00)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact end -->
+    <!-- parallax2 -->
+    <section class="kosong">
+      <div class="parallax-2"></div>
+    </section>
+    <!-- parallax2 -->
+    <!-- footer start -->
+    <footer class="text-white">
+      <div class="container text-center">
+        <div class="row text-start">
+          <!-- Section 1: Logo and Description -->
+          <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 text-start">
+            <h5 class="footer-kuweku">
+              KUW<span
+                ><img
+                  class="footer-logo"
+                  src="/assests/logo.png"
+                  alt="logo"
+                  width="25"
+                  height="30" /></span
+              >KU
+            </h5>
+            <p style="text-decoration: none; font-family: 'league spartan'">
+              KUWEKU adalah toko kue yang menyediakan berbagai jenis kue, bolu,
+              puding, dan camilan lezat lainnya. Setiap produk kami dibuat
+              dengan bahan-bahan terbaik dan cinta untuk memanjakan lidah Anda.
+            </p>
+          </div>
+
+          <!-- Section 2: Contact Information -->
+          <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 mx-auto">
+            <h5 class="footer-header">Contact Us</h5>
+            <p style="text-decoration: none; font-family: 'league spartan'">
+              <i class="fas fa-map"></i> Jalan T. Hamzah Bendahara, Bireuen
+              City, Kota Juang, Bireuen Regency, Aceh
+            </p>
+            <p style="text-decoration: none; font-family: 'league spartan'">
+              <a href="https://wa.me/6285262666468" class="q-link-footer"
+                ><i class="fa-brands fa-whatsapp"></i> +6285262666468</a
+              >
+            </p>
+          </div>
+
+          <!-- Section 3: Quick Links -->
+          <div class="col-sm-7 col-md-6 col-lg-3 col-xl-3 mx-auto">
+            <h5 class="footer-header">Quick Links</h5>
+            <p style="text-decoration: none; font-family: 'league spartan'">
+              <a href="#hero" class="q-link-footer">>>Home</a>
+            </p>
+            <p style="text-decoration: none; font-family: 'league spartan'">
+              <a href="#about" class="q-link-footer">>>About Us</a>
+            </p>
+            <p style="text-decoration: none; font-family: 'league spartan'">
+              <a href="#product" class="q-link-footer">>>Products</a>
+            </p>
+            <p style="text-decoration: none; font-family: 'league spartan'">
+              <a href="#contact" class="q-link-footer">>>Contact</a>
+            </p>
+          </div>
+
+          <!-- Section 4: Social Media -->
+          <div class="col-sm-5 col-md-6 col-lg-3 col-xl-3 mx-auto">
+            <h5 class="footer-header">Follow Us</h5>
+            <a href="https://www.instagram.com/kuweku24/" class="q-link-foote">
+              <i class="fab fa-tiktok"></i> kuweku24<<
+            </a>
+            <br />
+            <a href="https://www.instagram.com/kuweku24/" class="q-link-foote">
+              <i class="fab fa-instagram"></i> kuweku24<<
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- Bootstrap JavaScript -->
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Fontawesome JavaScript -->
+    <script src="https://kit.fontawesome.com/681baddaf5.js"></script>
+    <!-- Swiper JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- KUWEKU Javascript -->
+    <script src="kuweku.js"></script>
+    <!-- jQuery, and Popper.js nad AOS js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
