@@ -30,8 +30,7 @@ function toggleText(divId, btnId) {
 
 // ini untuk swiper
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
-  spaceBetween: 20,
+  spaceBetween: 15,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -69,7 +68,7 @@ var swiper = new Swiper(".mySwiper2", {
 });
 
 var swiper = new Swiper(".mySwiper3", {
-  spaceBetween: 15,
+  spaceBetween: 5,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -99,12 +98,12 @@ function adjustImages() {
   img2.style.display = "block";
   img3.style.display = "block";
 
-  // Jika lebar layar kurang dari 810PX (tablet)
-  if (window.innerWidth < 1280 && window.innerWidth >= 810) {
+  // Jika lebar layar kurang dari 768px (tablet)
+  if (window.innerWidth < 992 && window.innerWidth >= 768) {
     img3.style.display = "none"; // Hapus gambar ketiga di tablet
   }
   // Jika lebar layar kurang dari 576px (mobile)
-  else if (window.innerWidth < 810 && window.innerWidth >= 100) {
+  else if (window.innerWidth < 768 && window.innerWidth >= 100) {
     img2.style.display = "none"; // Hapus gambar kedua di mobile
     img3.style.display = "none"; // Hapus gambar ketiga di mobile
   }
