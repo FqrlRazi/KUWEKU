@@ -99,12 +99,12 @@ function adjustImages() {
   img2.style.display = "block";
   img3.style.display = "block";
 
-  // Jika lebar layar kurang dari 768px (tablet)
-  if (window.innerWidth < 850 && window.innerWidth >= 576) {
+  // Jika lebar layar kurang dari 810PX (tablet)
+  if (window.innerWidth < 1280 && window.innerWidth >= 810) {
     img3.style.display = "none"; // Hapus gambar ketiga di tablet
   }
   // Jika lebar layar kurang dari 576px (mobile)
-  else if (window.innerWidth < 576 && window.innerWidth >= 100) {
+  else if (window.innerWidth < 810 && window.innerWidth >= 100) {
     img2.style.display = "none"; // Hapus gambar kedua di mobile
     img3.style.display = "none"; // Hapus gambar ketiga di mobile
   }
