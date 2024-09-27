@@ -30,7 +30,7 @@ function toggleText(divId, btnId) {
 
 // ini untuk swiper
 var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 15,
+  spaceBetween: 10,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
