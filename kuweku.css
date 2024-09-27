@@ -233,7 +233,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .card {
   color: #fff;
-  width: 100%;
+  width: 90%;
   height: 220px;
   cursor: grab;
 }
@@ -286,6 +286,7 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 580px;
   margin-bottom: 10%;
   border-radius: 15px;
+  width: 100%;
 }
 .card-pro:hover {
   --p: 100%;
@@ -327,6 +328,7 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 230px;
   border-radius: 15px;
   cursor: grab;
+  width: 95%;
 }
 .card-body-testi {
   padding-left: 2%;
